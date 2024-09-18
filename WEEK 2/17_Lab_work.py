@@ -1,0 +1,21 @@
+salary = 54000
+no_tax_boundary= 14000
+rate1_boundary = 38000
+rate_1 = 0.24
+rate_2 = 0.34
+taxable_1 = rate1_boundary - no_tax_boundary
+taxable_2 = salary -rate1_boundary
+tax1 = taxable_1 * rate_1
+tax2 = taxable_2 * rate_2
+total_tax= round(tax1 + tax2)
+net_pay= salary - total_tax
+print("Salary: $", salary, sep= "")
+print("Amount to be taxed at: ", rate_1 * 100, "%: $", taxable_1 , sep= "")
+print("Tax at rate1: $", tax1, sep= "")
+print("Amount to be taxed at: ", rate_2 * 100, "%: $", taxable_2 , sep= "")
+print("Tax at rate2: $", tax2, sep= "")
+print("=" * 32)
+print("Total tax: $", total_tax, sep = "")
+print()
+print("Net pay: $", net_pay, sep = "")
+print("=" * 32)
